@@ -21,11 +21,17 @@ function searchMeal(e) {
       mealsEl.innerHTML = data.meals.map(meal =>
 
         `<div class="meal">
-        <img src="${meal.strMealThumb}" alt="">
+          <img src="${meal.strMealThumb}" alt="${meal}image">
+          <div class="meal-info" data-mealID="${meal.idMeal}">
+            <h3>${meal.strMeal}</h3>
+          </div>
         </div>`
-      );
+      )
+      .join(" ")
     }
   });
+
+  search.value = ""
   } else {
    alert("Please enter in a valid search!");
  }

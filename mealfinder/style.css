@@ -36,6 +36,48 @@ input[type='text'] {
   margin-left: 5px;
 }
 
+.meals-el {
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  grid-gap: 15px;
+  margin-top: 15px;
+
+}
+.meal {
+  cursor: pointer;
+  position: relative;
+
+}
+h3 {
+  text-align: center;
+}
+
+.meal-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 150px;
+  border-radius: 10px;
+  width: 150px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s ease-in;
+  opacity: 0;
+}
+
+.meal:hover .meal-info {
+  opacity: 1
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  border: solid 1px;
+}
+
 @media(max-width: 800px) {}
 @media(max-width: 700px) {}
 @media(max-width: 500px) {
